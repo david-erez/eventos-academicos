@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Base</title>
+</head>
+<body>
+
+    <!-- Encabezado Principal -->
+    <header>
+        <h1>Panel de Control</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Notificaciones</a></li>
+                <li><a href="#">Perfil de Usuario (nox)</a></li>
+                <li><a href="#">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <div style="display: flex;"> <!-- Solo este estilo para separar columnas visualmente -->
+        
+        <!-- Menú Lateral -->
+        <aside>
+            <h2>Menú</h2>
+            <ul>
+                <li><a href="#">Resumen General</a></li>
+                <li><a href="#">Proyectos</a></li>
+                <li><a href="#">Historias de Usuario (HU)</a></li>
+                <li><a href="#">Reportes de QA</a></li>
+                <li><a href="#">Configuración de Git</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <!-- Sección de Estadísticas Rápidas -->
+            <section>
+                <h2>Métricas del Sprint</h2>
+                <ul>
+                    <li>Total Historias de Usuario: 10</li>
+                    <li>Hotfixes Pendientes: 5</li>
+                    <li>Devoluciones QA: 5</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <!-- Sección de Contenido Principal / Tablas -->
+            <section>
+                <h2>Lista de Tareas</h2>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Descripción</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HU-001</td>
+                            <td>Configuración de entorno Docker</td>
+                            <td>Completado</td>
+                            <td><button>Ver</button></td>
+                        </tr>
+                        <tr>
+                            <td>HF-001</td>
+                            <td>Error crítico en base de datos</td>
+                            <td>En progreso</td>
+                            <td><button>Editar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <hr>
+
+            <!-- Sección de Formularios -->
+            <section>
+                <h2>Añadir Nuevo Registro</h2>
+                <form>
+                    <div>
+                        <label for="titulo">Título:</label>
+                        <input type="text" id="titulo" name="titulo">
+                    </div>
+                    <div>
+                        <label for="tipo">Tipo:</label>
+                        <select id="tipo" name="tipo">
+                            <option value="hu">Historia de Usuario</option>
+                            <option value="hotfix">Hotfix</option>
+                            <option value="qa">Devolución QA</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="comentario">Comentarios:</label>
+                        <textarea id="comentario" name="comentario"></textarea>
+                    </div>
+                    <button type="submit">Guardar en Base de Datos</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Sistema de Gestión de Desarrollo - nox@pc-nox</p>
+    </footer>
+
+</body>
+</html>
